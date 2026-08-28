@@ -58,13 +58,15 @@ Entre las principales referencias se encuentran:
 
 - Videojuegos de pelea conocidos como *Street Fighter*, *Mortal Kombat* y *Tekken*.
 
+
 ![Street Fighter](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ88z53F2Cz3XYM1T-cRr_M0RervNJmmSdDDvmYY-qEwT6E6pWtHpL9eYM&s=10)
 
 ![Mortal Kombat](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoHVl3w49SPtOHp_WPAMwDEq6NjvmD7IfseXP5JgmwsLLDuI_DU-ClyATq&s=10)
 
-![Tekken](http://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcL7hpiE_bgkd22QarJ2Ce4aK5tDsdDPjFU5FrgXa_sZPLKUxlxaqLeDNC&s=10)
+![Tekken](https://i.ytimg.com/vi/gvirO4dze8Y/maxresdefault.jpg)
 
 - Videojuegos con animaciones stop-motion como *Harold Halibut* y *Out of Words*.
+
 
 ![Harold Halibut](https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/924750/ss_b87395ade1f30f93495a1b72013484f738b6a997.1920x1080.jpg?t=1757956874)
 
@@ -72,6 +74,8 @@ Entre las principales referencias se encuentran:
 ![Out of Words](https://i.ytimg.com/vi/MuuTdgXwNkI/maxresdefault.jpg)
 
 - Las secuencias de créditos de *Spider-Man: No Way Home*.
+
+
 ![Spider-Man: No Way Home](https://imaginaryforces.com/images/pics/1920/16025_peyxCc_sm_nwh_001.jpg)
 
 
