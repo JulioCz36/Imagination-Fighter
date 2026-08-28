@@ -16,7 +16,7 @@
 
 # 1. High Concept y Visión Inicial
 
-**[INSERTAR Imagen representativa]**
+![Imagen representativa de Imagination Fighter](GDD/ConceptArt/imagen_referencia.png)
 
 ### High Concept
 
