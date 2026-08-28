@@ -100,3 +100,110 @@ Al mismo tiempo, el juego está dirigido a jugadores casuales y jugadores habitu
 - Victoria y derrota de la ronda.
 
 ---
+
+## 2.3 Concepto del Juego
+
+En *Imagination Fighter*, los personajes existen dentro de un mundo nacido de la imaginación de un niño. Lo que en un entorno cotidiano serían dibujos, objetos simples, figuras articuladas se transforma en elementos de un universo de pelea.
+El jugador controla a uno de estos personajes y se enfrenta a otro luchador en diferentes escenarios. La estructura del juego se basa en combates uno contra uno, donde los jugadores utilizan ataques, defensa, combos y movimientos especiales para derrotar a su oponente.
+La identidad de juego surge de la combinación entre un sistema de combate tradicional y una presentación visual artesanal. Los escenarios no buscan representar necesariamente lugares realistas, sino espacios que podrían haber sido imaginados, dibujados y construidos físicamente.
+Los personajes estarán representados mediante figuras articuladas, buscando generar la sensación de que juguetes u objetos físicos fueron animados mediante la técnica stop-motion.
+Los elementos de la interfaz también formarán parte de esta propuesta visual. Por ejemplo, las barras de vida podrán representarse mediante piezas de cartón o papel dibujadas a mano. Los efectos visuales seguirán dicha estetica.
+El principal atractivo del juego será la combinación entre el género de lucha y esta identidad visual.
+
+---
+
+## 2.4 Premisas del Videojuego
+
+### Premisa 1 — El mundo nace de la imaginación
+
+Los escenarios y elementos del juego deben transmitir la sensación de pertenecer a un mundo imaginado y construido artesanalmente.
+
+### Premisa 2 — Los personajes son objetos que cobran vida
+
+Los personajes deben conservar características visuales que permitan reconocerlos como figuras físicas o articuladas.
+
+### Premisa 3 — La estética artesanal es parte de la identidad
+
+Papel, cartón, lápices, dibujos y recortes serán elementos fundamentales de la dirección artística.
+
+### Premisa 4 — El combate debe ser el núcleo de la experiencia
+
+La estética no debe reemplazar al gameplay. El sistema de combate debe ser claro, funcional y entretenido por sí mismo.
+
+### Premisa 5 — Los efectos deben reforzar la imaginación
+
+Los efectos visuales y sonoros deben mantener una estética y coherencia con el mundo del juego.
+
+### Premisa 6 — Cada personaje debe tener identidad propia
+
+Los personajes deberán diferenciarse visualmente y, en la medida del alcance del proyecto, también mediante sus estilos de combate, ataques y personalidad.
+
+---
+
+## 2.5 Condiciones del Desarrollo
+
+### Motor y herramientas
+
+El proyecto será desarrollado utilizando las siguientes herramientas:
+
+- **Motor:** Unity.
+- **Control de versiones y almacenamiento del proyecto:** Git y GitHub.
+- **Edición y creación de imágenes:** Krita.
+- **Preparación de sprites y recursos gráficos:** herramientas digitales y herramientas web cuando resulte necesario.
+- **Generación de referencias e inspiración visual:** herramientas de inteligencia artificial como ChatGPT y Gemini.
+- **Documentación:** Markdown mediante el archivo `GDD.md`.
+
+### Metodología de desarrollo
+
+El desarrollo seguirá un proceso iterativo basado en la creación de prototipos, pruebas, evaluación y refinamiento.
+Se priorizará inicialmente la implementación y validación de las mecánicas fundamentales del combate.
+Una vez comprobadas las mecánicas, se incorporarán progresivamente los elementos visuales propios de la propuesta.
+
+### Tiempo de desarrollo
+
+Se estima una dedicación aproximada de **4 horas diarias**, aunque este tiempo podrá variar según la disponibilidad.
+
+### Limitaciones
+
+La producción de animaciones mediante figuras articuladas, fotografía y edición de imágenes puede requerir un tiempo considerable.
+
+---
+
+## 2.6 Alcance del proyecto
+
+El objetivo del Proyecto Final será desarrollar una version jugable de *Imagination Fighter* que permita demostrar la propuesta principal del videojuego.
+
+### Alcance previsto
+
+El proyecto contempla como objetivo principal:
+
+- **Cuatro personajes jugables**.
+- **Cuatro escenarios**.
+- Interfaz acorde a la dirección artística del proyecto.
+- Animaciones necesarias para representar los movimientos y ataques de los personajes.
+- Efectos visuales y sonoros acordes a la propuesta.
+- Menú básico para seleccionar personajes, escenario e iniciar una partida.
+- Posibilidad de jugar partidas contra otro jugador de manera local.
+- Oponente controlado por inteligencia artificial.
+
+El objetivo es que el prototipo permita completar una partida de principio a fin, desde la selección de los personajes hasta la determinación del ganador.
+
+### Funcionalidades secundarias
+
+En caso de que el desarrollo de las funcionalidades principales se encuentre finalizado y exista tiempo disponible, podrán incorporarse:
+
+- Personajes adicionales.
+- Escenarios adicionales.
+- Mini-juegos u otros modos de juego.
+- Elementos adicionales de personalización.
+- Mejoras y contenido adicional para los personajes.
+
+### Fuera del alcance inicial
+
+No se contempla como parte del alcance principal:
+
+- Campaña narrativa extensa.
+- Cinemáticas complejas.
+- Una gran cantidad de personajes o escenarios por fuera de los objetivos establecidos.
+
+---
