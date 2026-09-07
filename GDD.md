@@ -2,7 +2,7 @@
 
 **Nombre del Juego:** Imagination Fighter  
 **Versión:** 0.1.0  
-**Fecha de actualización:** 28/08/2026
+**Fecha de actualización:** 7/09/2026
 
 ---
 
@@ -20,7 +20,7 @@
 
 ### High Concept
 
-**Imagination Fighter** es un videojuego de lucha en el que distintos personajes se enfrentan en combates uno contra uno dentro de un mundo inspirado en la imaginación infantil. Su identidad visual combina figuras articuladas, estética de stop-motion y escenarios construidos a partir de materiales como papel, cartón y dibujos hechos a mano.
+**Imagination Fighter** es un videojuego de lucha en el que distintas figuras de acción se enfrentan en combates uno contra uno dentro de un mundo inspirado en la imaginación infantil, para demostrar cuál es la mejor y convertirse en la figura favorita del niño. Su identidad visual combina figuras articuladas, estética de stop-motion y escenarios construidos a partir de materiales como papel, cartón y dibujos hechos a mano.
 El proyecto busca utilizar una estética caricaturesca como principal elemento diferenciador dentro de un género de videojuegos ampliamente conocido.
 
 ---
@@ -31,7 +31,7 @@ El proyecto busca utilizar una estética caricaturesca como principal elemento d
 
 El objetivo principal del proyecto es desarrollar un videojuego de lucha que permita demostrar la viabilidad de su propuesta jugable y estética.
 Desde el punto de vista del diseño, se busca construir un sistema de combate que resulte entretenido, tomando como referencia los videojuegos de pelea.
-El proyecto busca explorar una dirección visual basada en la imaginación y en la utilización de materiales físicos representados digitalmente, principalmente papel, cartón, dibujos, recortes y figuras articuladas.
+El proyecto busca explorar una dirección visual basada en la imaginación y en la utilización de materiales físicos representados digitalmente, principalmente papel, cartón, dibujos.
 Desde el punto de vista académico, el proyecto tiene como objetivo integrar conocimientos adquiridos durante la Tecnicatura en Diseño y Programación de Videojuegos, especialmente aquellos relacionados con diseño de videojuegos, programación, interfaces y producción.
 
 ---
@@ -40,11 +40,11 @@ Desde el punto de vista académico, el proyecto tiene como objetivo integrar con
 
 ### Definición de la idea
 
-*Imagination Fighter* es un videojuego de pelea basado en la imaginación de un niño de 10 años, donde las figuras y dibujos que forman parte de su imaginación cobran vida y se enfrentan entre sí.
-Los combates se desarrollan en escenarios que buscan representar espacios construidos manualmente, utilizando materiales como papel, cartón y dibujos.
+*Imagination Fighter* es un videojuego de pelea basado en la imaginación de un niño, donde las figuras enfrentan en combates uno contra uno, para demostrar cuál es la mejor y convertirse en la figura favorita del niño.
+Los combates se desarrollan en escenarios que buscan representar espacios construidos manualmente.
 Los personajes estarán representados mediante figuras articuladas, buscando transmitir la apariencia de objetos físicos animados mediante la técnica stop-motion.
 Los efectos visuales también seguirán una estética caricaturesca y artesanal, utilizando recursos gráficos que puedan parecer dibujados a mano.
-La propuesta no busca modificar las bases del género de pelea, sino diferenciarse mediante una identidad temática y audiovisual propia, centrada en la imaginación infantil.
+La propuesta no busca modificar las bases del género de pelea, sino diferenciarse mediante una identidad temática y audiovisual propia.
 
 ### Género
 
@@ -81,9 +81,8 @@ Entre las principales referencias se encuentran:
 
 ### Público objetivo
 
-El público objetivo de *Imagination Fighter* está compuesto principalmente por niños, adolescentes y adultos jóvenes, aproximadamente entre los 5 y 25 años.
-La propuesta busca atraer especialmente a un público infantil y juvenil mediante su estética.
-Al mismo tiempo, el juego está dirigido a jugadores casuales y jugadores habituales del género de pelea.
+El público objetivo de *Imagination Fighter* son jugadores de 13 años en adelante, especialmente aquellos que disfrutan de los videojuegos de pelea.
+Se busca ser accesible tanto para jugadores casuales como para jugadores habituales del género, ofreciendo combates uno contra uno que puedan resultar fáciles de comprender.
 
 
 ### Mecánicas principales
@@ -103,7 +102,7 @@ Al mismo tiempo, el juego está dirigido a jugadores casuales y jugadores habitu
 
 ## 2.3 Concepto del Juego
 
-En *Imagination Fighter*, los personajes existen dentro de un mundo nacido de la imaginación de un niño. Lo que en un entorno cotidiano serían dibujos, objetos simples, figuras articuladas se transforma en elementos de un universo de pelea.
+En *Imagination Fighter*, los personajes existen dentro de un mundo nacido de la imaginación de un niño, donde las figuras se transforman en elementos de un universo de pelea.
 El jugador controla a uno de estos personajes y se enfrenta a otro luchador en diferentes escenarios. La estructura del juego se basa en combates uno contra uno, donde los jugadores utilizan ataques, defensa, combos y movimientos especiales para derrotar a su oponente.
 La identidad de juego surge de la combinación entre un sistema de combate tradicional y una presentación visual artesanal. Los escenarios no buscan representar necesariamente lugares realistas, sino espacios que podrían haber sido imaginados, dibujados y construidos físicamente.
 Los personajes estarán representados mediante figuras articuladas, buscando generar la sensación de que juguetes u objetos físicos fueron animados mediante la técnica stop-motion.
@@ -128,9 +127,9 @@ Papel, cartón, lápices, dibujos y recortes serán elementos fundamentales de l
 
 ### Premisa 4 — El combate debe ser el núcleo de la experiencia
 
-La estética no debe reemplazar al gameplay. El sistema de combate debe ser claro, funcional y entretenido por sí mismo.
+El sistema de combate debe ser claro, funcional y entretenido por sí mismo.
 
-### Premisa 5 — Los efectos deben reforzar la imaginación
+### Premisa 5 — Los efectos deben reforzar
 
 Los efectos visuales y sonoros deben mantener una estética y coherencia con el mundo del juego.
 
@@ -151,7 +150,7 @@ El proyecto será desarrollado utilizando las siguientes herramientas:
 - **Edición y creación de imágenes:** Krita.
 - **Preparación de sprites y recursos gráficos:** herramientas digitales y herramientas web cuando resulte necesario.
 - **Generación de referencias e inspiración visual:** herramientas de inteligencia artificial como ChatGPT y Gemini.
-- **Documentación:** Markdown mediante el archivo `GDD.md`.
+- **Documentación:** mediante el archivo `GDD.md`.
 
 ### Metodología de desarrollo
 
@@ -165,7 +164,7 @@ Se estima una dedicación aproximada de **4 horas diarias**, aunque este tiempo 
 
 ### Limitaciones
 
-La producción de animaciones mediante figuras articuladas, fotografía y edición de imágenes puede requerir un tiempo considerable.
+La producción de animaciones, fotografía y edición de imágenes puede requerir un tiempo considerable. Limitando personajes y escenarios
 
 ---
 
@@ -188,22 +187,24 @@ El proyecto contempla como objetivo principal:
 
 El objetivo es que el prototipo permita completar una partida de principio a fin, desde la selección de los personajes hasta la determinación del ganador.
 
-### Funcionalidades secundarias
+---
+# 3. Diseño Detallado del Juego
 
-En caso de que el desarrollo de las funcionalidades principales se encuentre finalizado y exista tiempo disponible, podrán incorporarse:
+## 3.1 Elementos del Juego
 
-- Personajes adicionales.
-- Escenarios adicionales.
-- Mini-juegos u otros modos de juego.
-- Elementos adicionales de personalización.
-- Mejoras y contenido adicional para los personajes.
+Los principales elementos que intervienen son los personajes, los escenarios, los sistemas de combate y los recursos utilizados durante las peleas.
 
-### Fuera del alcance inicial
+### 3.1.1 Personajes
 
-No se contempla como parte del alcance principal:
+Son las figuras de acción que el jugador puede controlar durante los combates. Cada personaje contará con características visuales propias y un conjunto de ataques y habilidades que permitirán diferenciar su estilo de combate.
 
-- Campaña narrativa extensa.
-- Cinemáticas complejas.
-- Una gran cantidad de personajes o escenarios por fuera de los objetivos establecidos.
+### 3.1.2 Oponente
+
+Es la figura de acción que se enfrenta al jugador durante el combate. Puede estar controlada por otro jugador en partidas locales o por la inteligencia artificial.
+
+### 3.1.3 Escenarios
+
+Son los espacios donde se desarrollan los combates. Estarán inspirados en objetos y lugares cotidianos del entorno del niño.
 
 ---
+
