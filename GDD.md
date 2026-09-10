@@ -94,9 +94,14 @@ Se busca ser accesible tanto para jugadores casuales como para jugadores habitua
 - Combos.
 - Recepción de daño.
 - Gestión de puntos de vida.
-- Utilización de ataques especiales.
+- Gestión de la Barra de Imaginación.
+- Gestión de la Barra de Poder.
+- Utilización de técnicas especiales.
+- Utilización de ataques Super y Ultimate.
 - Enfrentamiento contra otro personaje.
+- Sistema de rondas.
 - Victoria y derrota de la ronda.
+- Victoria y derrota de la partida.
 
 ---
 
@@ -205,6 +210,40 @@ Es la figura de acción que se enfrenta al jugador durante el combate. Puede est
 ### 3.1.3 Escenarios
 
 Son los espacios donde se desarrollan los combates. Estarán inspirados en objetos y lugares cotidianos del entorno del niño.
+
+---
+
+## 3.2 Reglas
+
+- El combate se desarrolla entre dos personajes en un enfrentamiento uno contra uno.
+- Cada personaje comienza con su cantidad máxima de vida.
+- Cada ronda dura 99s.
+- Si la vida de un personaje llega a cero, pierde la ronda.
+- Si lu
+- El jugador gana la partida ganando 2 rondas.
+- El jugador pierde la partida perdiendo 2 rondas.
+- El jugador puede utilizar ataques básicos, defensa, combos y técnicas especiales.
+- Ciertas acciones consumen Imaginación.
+- La Barra de Imaginación se recupera gradualmente durante el combate o mediante una acción de carga.
+- La Barra de Poder aumenta principalmente al atacar, recibir ataques y participar activamente en el combate.
+- Las habilidades Super y Ultimate requieren Poder acumulado para poder utilizarse.
+- La Barra de Poder se divide en tres niveles.
+- Las habilidades que requieran Poder determinarán qué nivel mínimo debe alcanzarse para poder utilizarlas.
+- El jugador debe administrar sus recursos durante el combate para poder utilizar las diferentes técnicas disponible.
+
+---
+
+## 3.3 Descripción de una sesión de juego
+
+Una sesión del juego *Imagination Fighter* comienza cuando el jugador inicia el juego y se encuentra con una pantalla de presentación que muestra el nombre o logotipo del videojuego. Para continuar, deberá presionar el botón correspondiente del teclado o mando.
+A continuación, accederá al menú principal, donde podrá seleccionar entre los modos de juego disponibles, como **1v1**, **Práctica** y **Opciones**.
+Si el jugador selecciona el modo **1v1**, deberá elegir si desea enfrentarse contra otro jugador en una partida local o contra la CPU.
+Luego, accederá a la pantalla de selección de personajes. El jugador podrá elegir la figura que desea controlar. En caso de jugar contra la CPU, podrá seleccionar manualmente al oponente o utilizar una opción de selección aleatoria.
+Una vez seleccionados los personajes, el jugador deberá confirmar la selección para comenzar la pelea. Seguido de eso se mostrará una pantalla de carga y posteriormente se presentará el escenario junto con los dos personajes.
+Antes de comenzar la pelea, se realizará una breve presentación de los peleadores y sus posiciones iniciales. Luego, se mostrará una cuenta regresiva que indicará el comienzo del combate.
+Durante la pelea, los jugadores podrán hacer jugar con las mecanicas del juego.
+Como los combates se desarrollará mediante un sistema de rondas. El jugador que consiga ganar dos rondas será declarado ganador de la partida. Por el contrario, el jugador que pierda dos rondas será derrotado.
+Una vez finalizada la partida, se mostrará el resultado del combate y el jugador podrá volver a iniciar una nueva partida, ya sea utilizando los mismos personajes o seleccionando otros.
 
 ---
 
