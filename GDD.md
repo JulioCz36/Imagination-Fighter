@@ -2,7 +2,7 @@
 
 **Nombre del Juego:** Imagination Fighter  
 **Versión:** 0.1.0  
-**Fecha de actualización:** 7/09/2026
+**Fecha de actualización:** 11/09/2026
 
 ---
 
@@ -219,7 +219,7 @@ Son los espacios donde se desarrollan los combates. Estarán inspirados en objet
 - Cada personaje comienza con su cantidad máxima de vida.
 - Cada ronda dura 99s.
 - Si la vida de un personaje llega a cero, pierde la ronda.
-- Si lu
+- Si se termina el tiempo de la ronda el jugador con más vida gana la ronda.
 - El jugador gana la partida ganando 2 rondas.
 - El jugador pierde la partida perdiendo 2 rondas.
 - El jugador puede utilizar ataques básicos, defensa, combos y técnicas especiales.
@@ -247,3 +247,11 @@ Una vez finalizada la partida, se mostrará el resultado del combate y el jugado
 
 ---
 
+## 3.4 Estética y Experiencia del Jugador
+
+Se busca generar una experiencia divertida, competitiva y dinámica, combinando las características del videojuego.
+La propuesta visual busca despertar la curiosidad e imaginación, utilizando figuras de acción, escenarios construidos con papel y cartón. La estética caricaturesca y el stop-motion buscan reforzar la sensación de estar dentro de un mundo creado de juguetes y materiales cotidianos.
+Durante las peleas se busca generar desafío y competencia. El jugador deberá aprender a utilizar los ataques, la defensa y los combos. La administración de las barras de Imaginación y Poder agregará estrategia, ya que el jugador deberá decidir cuándo utilizar sus recursos.
+La estructura de rondas y la posibilidad de enfrentarse contra otro jugador o CPU busca el carácter competitivo. La obtención de una victoria deberá generar satisfacción.
+
+---
