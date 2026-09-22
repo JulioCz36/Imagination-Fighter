@@ -1,0 +1,5 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; position: absolute; height: 142px; width: 1278px; flex-direction: column;">
+        <ui:ProgressBar value="0" title="P1" name="VidaP1" style="height: 113px; width: 688px; flex-direction: column; background-size: 208% 2388%; -unity-background-image-tint-color: rgb(255, 0, 0); background-position-y: center; background-position-x: center; flex-wrap: nowrap; align-self: center; align-content: auto; align-items: stretch; justify-content: center; position: relative; top: 48px; left: 103px;"/>
+    </ui:VisualElement>
+</ui:UXML>

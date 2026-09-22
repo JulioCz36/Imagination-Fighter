@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46de11e82c7686d4682ec1c083c0fd26, type: 3}
-  m_Name: Jin
-  m_EditorClassIdentifier: Assembly-CSharp::ComboData
-  nombreDelAtaque: Ataque Rafaja
-  secuenciaRequerida: ArribaDerechaH
-  parametroBool: combos
-  numeroDeAnimacion: 0
+  m_Script: {fileID: 11500000, guid: f13c45fd0c5ce064caf517ff516f2441, type: 3}
+  m_Name: Seleccion_P2
+  m_EditorClassIdentifier: Assembly-CSharp::PersonajeSeleccionadoSO
+  prefabDelPersonaje: {fileID: 11713969872163082, guid: d043f6762fb3a334499287625fad2f89, type: 3}

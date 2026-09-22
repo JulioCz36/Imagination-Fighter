@@ -278,7 +278,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_prueba
+  m_Name: Jim_animator
   serializedVersion: 6
   m_AnimatorParameters:
   - m_Name: basicosN
