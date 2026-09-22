@@ -543,7 +543,6 @@ GameObject:
   - component: {fileID: 1236196202}
   - component: {fileID: 1236196201}
   - component: {fileID: 1236196204}
-  - component: {fileID: 1236196203}
   m_Layer: 7
   m_Name: Player_prueba
   m_TagString: Untagged
@@ -778,18 +777,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1236196203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236196195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 711afc76852ec3345bc355a142258c1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FighterController
 --- !u!114 &1236196204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,7 +789,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 680bab3fdfa63d94f9baffc3d933a231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  fighter: {fileID: 1236196203}
+  Combo: 
+  Cronometro: 0
+  Tiempo: 0.45
+  Atacando: 0
+  animator: {fileID: 1236196198}
   moveSpeed: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
