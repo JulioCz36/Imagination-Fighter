@@ -5,12 +5,13 @@ public class Entity : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
 
-    [Header("Canal de Eventos")]
-    [SerializeField] private FloatEventChannel canalVida;
+    [Header("Datos fijos del Personaje")]
+    [SerializeField] private CharacterDataSO datosBase;
 
-    [Header("Estadísticas")]
-    public float vidaMaxima = 100f;
-    private float vidaActual;
+    [Header("Estadísticas en Tiempo Real")]
+    public float vidaActual;
+
+    private FloatEventChannel canalVidaAsignado;
 
     [Header("Combos de este Personaje")]
     public ComboData[] listaDeCombos;
@@ -28,21 +29,48 @@ public class Entity : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        vidaActual = vidaMaxima;
     }
 
-    private void Start()
+    public void InicializarEntidad(FloatEventChannel canalParaEstaEntidad)
     {
-        if (canalVida != null) canalVida.RaiseEvent(vidaActual / vidaMaxima);
+        canalVidaAsignado = canalParaEstaEntidad;
+
+        if (datosBase != null)
+        {
+            vidaActual = datosBase.vidaMaxima;
+        }
+        else
+        {
+            vidaActual = 100f;
+        }
+
+        if (canalVidaAsignado != null)
+            canalVidaAsignado.RaiseEvent(1f);
     }
 
-    public void DarOrdenMovimiento(Vector2 direccion)
+    public void RecibirDanio(float cantidad)
     {
-        comandoMovimiento = direccion;
+        float vidaMax = ObtenerVidaMaxima();
+
+        vidaActual -= cantidad;
+        vidaActual = Mathf.Clamp(vidaActual, 0, vidaMax);
+
+        float porcentaje = vidaActual / vidaMax;
+
+        // LE MANDAMOS EL DATO DIRECTO AL CANAL ASIGNADO
+        if (canalVidaAsignado != null)
+        {
+            canalVidaAsignado.RaiseEvent(porcentaje);
+        }
     }
+
+    public string ObtenerNombre() => datosBase != null ? datosBase.playerName : "Desconocido";
+    public float ObtenerVidaMaxima() => datosBase != null ? datosBase.vidaMaxima : 100f;
+    public void DarOrdenMovimiento(Vector2 direccion) => comandoMovimiento = direccion;
 
     public void EjecutarAtaque()
     {
+
         Combo += "H";
         Cronometro = Tiempo;
 
@@ -55,26 +83,16 @@ public class Entity : MonoBehaviour
         }
     }
 
-    public void RecibirDanio(float cantidad)
-    {
-        vidaActual -= cantidad;
-        vidaActual = Mathf.Clamp(vidaActual, 0, vidaMaxima);
-
-        if (canalVida != null) canalVida.RaiseEvent(vidaActual / vidaMaxima);
-    }
-
     public void VerificarCombosEspeciales()
     {
         if (Atacando || listaDeCombos == null) return;
 
-        // Recorremos la lista
         foreach (ComboData comboItem in listaDeCombos)
         {
             if (Combo.Contains(comboItem.secuenciaRequerida))
             {
                 animator.SetBool("attack", false);
                 animator.SetBool("combosAttack", false);
-
                 animator.SetBool(comboItem.parametroBool, true);
 
                 if (comboItem.parametroBool == "combos") animator.SetFloat("specialesN", comboItem.numeroDeAnimacion);
@@ -105,5 +123,5 @@ public class Entity : MonoBehaviour
         }
         rb.linearVelocity = new Vector2(comandoMovimiento.x * moveSpeed, rb.linearVelocity.y);
     }
-}
 
+}

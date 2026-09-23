@@ -468,6 +468,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ManejadorEntrenamiento
   controladorP1: {fileID: 1465882199}
+  controladorUI: {fileID: 1912728959}
+  canalVidaP1: {fileID: 11400000, guid: 5573b7f6569b2f444a10069602419012, type: 2}
+  canalVidaP2: {fileID: 11400000, guid: 42d729a8e6fe68c489617b8953d884ce, type: 2}
   posicionSpawnP1: {fileID: 2083108273}
   posicionSpawnP2: {fileID: 843336139}
   datosP1: {fileID: 11400000, guid: a55d4e62b51e19243bc958f53d966aba, type: 2}
@@ -763,6 +766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1912728958}
   - component: {fileID: 1912728957}
+  - component: {fileID: 1912728959}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -808,6 +812,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1912728959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912728956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4841090338eb154e94e7b5f0fbf4164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIController
+  canalVidaP1: {fileID: 11400000, guid: 5573b7f6569b2f444a10069602419012, type: 2}
+  canalVidaP2: {fileID: 11400000, guid: 42d729a8e6fe68c489617b8953d884ce, type: 2}
 --- !u!1 &2083108272
 GameObject:
   m_ObjectHideFlags: 0

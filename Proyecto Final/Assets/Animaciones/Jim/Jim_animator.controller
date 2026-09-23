@@ -54,7 +54,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b23ca44b1991c44479f1fb2cb05a13f0, type: 2}
+  m_Motion: {fileID: 7400000, guid: 21d1d37600b765143aa3bef21c680682, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -146,7 +146,7 @@ BlendTree:
   m_Name: CombosBasicos
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 273d7f497ec224549ae34c6d40f2fa28, type: 2}
+    m_Motion: {fileID: 7400000, guid: f8d6713cbd3dcf34ba6cfb7cb6834a2f, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -337,10 +337,10 @@ BlendTree:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Speciales
+  m_Name: Basicos
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 901da61a0ad87ae4d8a7e9ecc567dc0a, type: 2}
+    m_Motion: {fileID: 7400000, guid: bcb67df5d8ec5834d9af7e9ddb5ab3fb, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1

@@ -106,7 +106,7 @@ Animator:
   m_GameObject: {fileID: 11713969872163082}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2e0c8b406a63bbf4987a542a2ca78dd9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0557723cba0bfca44b82e9e66c73e63b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -194,9 +194,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef1e1900f255cba4eabedf487a59eee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Entity
-  canalVida: {fileID: 0}
-  vidaMaxima: 100
-  listaDeCombos: []
+  datosBase: {fileID: 11400000, guid: 5adbb574490a04b42bf5dbcdf79115cf, type: 2}
+  vidaActual: 0
+  listaDeCombos:
+  - {fileID: 11400000, guid: d87569067750f6941a412eaa344d36bc, type: 2}
   Combo: 
   Cronometro: 0
   Tiempo: 0.5
