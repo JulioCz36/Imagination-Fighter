@@ -1,5 +1,15 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1; position: absolute; height: 142px; width: 1278px; flex-direction: column;">
-        <ui:ProgressBar value="0" title="P1" name="VidaP1" style="height: 113px; width: 688px; flex-direction: column; background-size: 208% 2388%; -unity-background-image-tint-color: rgb(255, 0, 0); background-position-y: center; background-position-x: center; flex-wrap: nowrap; align-self: center; align-content: auto; align-items: stretch; justify-content: center; position: relative; top: 48px; left: 103px;"/>
+    <ui:VisualElement name="ContenedorSuperior" style="flex-grow: 1; flex-direction: row; align-self: auto; align-content: flex-start; justify-content: flex-start; align-items: stretch; min-width: auto; margin-top: 40px; margin-right: 40px; margin-bottom: 40px; margin-left: 40px; min-height: auto; max-height: 300px;">
+        <ui:VisualElement name="ContenedorP1" style="flex-grow: 1; flex-direction: column; max-height: 150px; max-width: 800px;">
+            <ui:ProgressBar value="22" title="my-progress" name="VidaP1" style="height: 70px;"/>
+            <ui:Label text="playerName" style="height: 60px; font-size: 40px;"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="ContenedorReloj" style="flex-grow: 1; border-left-color: rgb(255, 251, 255); border-right-color: rgb(255, 251, 255); border-top-color: rgb(255, 251, 255); border-bottom-color: rgb(255, 251, 255); background-color: rgb(120, 68, 83); border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; align-items: center; justify-content: center; max-height: 150px; max-width: 150px; align-content: stretch; align-self: auto; flex-direction: column;">
+            <ui:Label text="99" style="max-height: 150px; max-width: 150px; height: 100px; width: 100px; font-size: 90px; align-items: center; justify-content: center; align-self: center; align-content: center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="ContenedorP2" style="flex-grow: 1; flex-direction: column; max-height: 150px;">
+            <ui:Label text="playerName"/>
+            <ui:ProgressBar value="22" title="my-progress" name="VidaP2"/>
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
