@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f13c45fd0c5ce064caf517ff516f2441, type: 3}
-  m_Name: Seleccion_P2
+  m_Name: P1_Selection
   m_EditorClassIdentifier: Assembly-CSharp::PersonajeSeleccionadoSO
   prefabDelPersonaje: {fileID: 11713969872163082, guid: d043f6762fb3a334499287625fad2f89, type: 3}

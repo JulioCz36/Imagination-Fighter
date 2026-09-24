@@ -12,6 +12,7 @@ public class Entity : MonoBehaviour
     public float vidaActual;
 
     private FloatEventChannel canalVidaAsignado;
+    public FloatEventChannel CanalVidaAsignado => canalVidaAsignado;
 
     [Header("Combos de este Personaje")]
     public ComboData[] listaDeCombos;
@@ -57,7 +58,7 @@ public class Entity : MonoBehaviour
 
         float porcentaje = vidaActual / vidaMax;
 
-        // LE MANDAMOS EL DATO DIRECTO AL CANAL ASIGNADO
+        // mando el mensajito tuki
         if (canalVidaAsignado != null)
         {
             canalVidaAsignado.RaiseEvent(porcentaje);
@@ -70,7 +71,6 @@ public class Entity : MonoBehaviour
 
     public void EjecutarAtaque()
     {
-
         Combo += "H";
         Cronometro = Tiempo;
 

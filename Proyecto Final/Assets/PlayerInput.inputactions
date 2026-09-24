@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "name": "ControlesJugador",
+    "name": "PlayerInput",
     "maps": [
         {
             "name": "Controles",

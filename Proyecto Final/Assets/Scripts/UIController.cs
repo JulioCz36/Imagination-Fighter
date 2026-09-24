@@ -3,52 +3,68 @@ using UnityEngine.UIElements;
 
 public class UIController : MonoBehaviour
 {
-    [Header("Canales que escucha la UI")]
-    [SerializeField] private FloatEventChannel canalVidaP1;
-    [SerializeField] private FloatEventChannel canalVidaP2;
-
     private UIDocument uiDocument;
     private VisualElement rellenoVidaP1;
     private VisualElement rellenoVidaP2;
     private Label textoNombreP1;
     private Label textoNombreP2;
 
-    private void Start()
+    private FloatEventChannel canalActivoP1;
+    private FloatEventChannel canalActivoP2;
+
+    private void Awake()
     {
         uiDocument = GetComponent<UIDocument>();
         VisualElement root = uiDocument.rootVisualElement;
 
-    
         rellenoVidaP1 = root.Q<VisualElement>("RellenoVidaP1");
         rellenoVidaP2 = root.Q<VisualElement>("RellenoVidaP2");
-
-        
         textoNombreP1 = root.Q<Label>("NombreTextoP1");
         textoNombreP2 = root.Q<Label>("NombreTextoP2");
 
-        // Valores por defecto al arrancar
         ActualizarBarraPorcentaje(rellenoVidaP1, 1f);
         ActualizarBarraPorcentaje(rellenoVidaP2, 1f);
     }
 
 
-    public void EstablecerNombresEnPantalla(string nombreP1, string nombreP2)
+    public void ConfigurarUI(Entity jugador1, Entity jugador2)
     {
-        if (textoNombreP1 != null) textoNombreP1.text = nombreP1;
-        if (textoNombreP2 != null) textoNombreP2.text = nombreP2;
-    }
+    
+        if (jugador1 != null)
+        {
+            if (textoNombreP1 != null) textoNombreP1.text = jugador1.ObtenerNombre();
 
-    private void OnEnable()
-    {
+            DesuscribirCanalP1();
 
-        if (canalVidaP1 != null) canalVidaP1.OnEventRaised += OnVidaP1Modificada;
-        if (canalVidaP2 != null) canalVidaP2.OnEventRaised += OnVidaP2Modificada;
+            canalActivoP1 = jugador1.CanalVidaAsignado;
+            if (canalActivoP1 != null) canalActivoP1.OnEventRaised += OnVidaP1Modificada;
+        }
+
+        if (jugador2 != null)
+        {
+            if (textoNombreP2 != null) textoNombreP2.text = jugador2.ObtenerNombre();
+
+            DesuscribirCanalP2();
+
+            canalActivoP2 = jugador2.CanalVidaAsignado;
+            if (canalActivoP2 != null) canalActivoP2.OnEventRaised += OnVidaP2Modificada;
+        }
     }
 
     private void OnDisable()
     {
-        if (canalVidaP1 != null) canalVidaP1.OnEventRaised -= OnVidaP1Modificada;
-        if (canalVidaP2 != null) canalVidaP2.OnEventRaised -= OnVidaP2Modificada;
+        DesuscribirCanalP1();
+        DesuscribirCanalP2();
+    }
+
+    private void DesuscribirCanalP1()
+    {
+        if (canalActivoP1 != null) canalActivoP1.OnEventRaised -= OnVidaP1Modificada;
+    }
+
+    private void DesuscribirCanalP2()
+    {
+        if (canalActivoP2 != null) canalActivoP2.OnEventRaised -= OnVidaP2Modificada;
     }
 
     private void OnVidaP1Modificada(float porcentaje) => ActualizarBarraPorcentaje(rellenoVidaP1, porcentaje);
@@ -63,3 +79,4 @@ public class UIController : MonoBehaviour
         }
     }
 }
+
