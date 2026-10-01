@@ -14,4 +14,7 @@ public class ComboData : ScriptableObject
 
     [Tooltip("El número de animación")]
     public float numeroDeAnimacion;
+
+    [Header("Cantidad de danio")]
+    public float danioDeEsteAtaque;
 }

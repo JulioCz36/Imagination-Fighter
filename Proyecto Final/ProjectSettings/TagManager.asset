@@ -12,10 +12,10 @@ TagManager:
   - Water
   - UI
   - Floor
-  - Player
+  - Player_Physics
   - Limits
-  - 
-  - 
+  - Player_Hurtbox
+  - Player_Hitbox
   - 
   - 
   - 

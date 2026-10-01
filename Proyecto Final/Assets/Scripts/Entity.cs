@@ -11,6 +11,9 @@ public class Entity : MonoBehaviour
     [Header("Estadísticas en Tiempo Real")]
     public float vidaActual;
 
+    [Header("Combate")]
+    [SerializeField] private Hitbox miHitboxAtaque;
+
     private FloatEventChannel canalVidaAsignado;
     public FloatEventChannel CanalVidaAsignado => canalVidaAsignado;
 
@@ -106,6 +109,13 @@ public class Entity : MonoBehaviour
         }
     }
 
+    public void SetearDanioAtaque(float cantidadDanio)
+    {
+        if (miHitboxAtaque != null)
+        {
+            miHitboxAtaque.danioActual = cantidadDanio;
+        }
+    }
     public void FinalAttack()
     {
         animator.SetBool("combos", false);
