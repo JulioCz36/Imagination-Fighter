@@ -13,6 +13,7 @@ public class Entity : MonoBehaviour
 
     [Header("Combate")]
     [SerializeField] private Hitbox miHitboxAtaque;
+    public float danioAtaqueBasico = 10f;
 
     private FloatEventChannel canalVidaAsignado;
     public FloatEventChannel CanalVidaAsignado => canalVidaAsignado;
@@ -72,6 +73,18 @@ public class Entity : MonoBehaviour
     public float ObtenerVidaMaxima() => datosBase != null ? datosBase.vidaMaxima : 100f;
     public void DarOrdenMovimiento(Vector2 direccion) => comandoMovimiento = direccion;
 
+    private void Update()
+    {
+        // vacio el tema de combos tukson
+        if (Cronometro > 0)
+        {
+            Cronometro -= Time.deltaTime;
+            if (Cronometro <= 0)
+            {
+                Combo = "";
+            }
+        }
+    }
     public void EjecutarAtaque()
     {
         Combo += "H";
@@ -80,20 +93,31 @@ public class Entity : MonoBehaviour
         if (!Atacando)
         {
             Atacando = true;
+
+            if (miHitboxAtaque != null) miHitboxAtaque.danioActual = danioAtaqueBasico;
+
             animator.SetBool("attack", true);
             animator.SetFloat("basicosN", 0);
-            Combo = "";
+        }
+        else
+        {
+            VerificarCombosEspeciales();
         }
     }
 
     public void VerificarCombosEspeciales()
     {
-        if (Atacando || listaDeCombos == null) return;
+        if (listaDeCombos == null) return;
 
         foreach (ComboData comboItem in listaDeCombos)
         {
             if (Combo.Contains(comboItem.secuenciaRequerida))
             {
+                if (miHitboxAtaque != null)
+                {
+                    miHitboxAtaque.danioActual = comboItem.danioDeEsteAtaque;
+                }
+
                 animator.SetBool("attack", false);
                 animator.SetBool("combosAttack", false);
                 animator.SetBool(comboItem.parametroBool, true);
@@ -108,20 +132,13 @@ public class Entity : MonoBehaviour
             }
         }
     }
-
-    public void SetearDanioAtaque(float cantidadDanio)
-    {
-        if (miHitboxAtaque != null)
-        {
-            miHitboxAtaque.danioActual = cantidadDanio;
-        }
-    }
     public void FinalAttack()
     {
         animator.SetBool("combos", false);
         animator.SetBool("attack", false);
         animator.SetBool("combosAttack", false);
         Atacando = false;
+        Combo = "";
     }
 
     private void FixedUpdate()

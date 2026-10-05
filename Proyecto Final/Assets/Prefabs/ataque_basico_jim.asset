@@ -16,3 +16,4 @@ MonoBehaviour:
   secuenciaRequerida: HH
   parametroBool: combosAttack
   numeroDeAnimacion: 0
+  danioDeEsteAtaque: 10
