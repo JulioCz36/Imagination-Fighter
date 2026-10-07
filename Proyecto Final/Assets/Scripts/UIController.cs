@@ -4,6 +4,12 @@ using UnityEngine.UIElements;
 public class UIController : MonoBehaviour
 {
     private UIDocument uiDocument;
+
+    private Label textoReloj;
+
+    private VisualElement menuPausa;
+    private VisualElement menuEntrenamiento;
+
     private VisualElement rellenoVidaP1;
     private VisualElement rellenoVidaP2;
     private Label textoNombreP1;
@@ -22,8 +28,22 @@ public class UIController : MonoBehaviour
         textoNombreP1 = root.Q<Label>("NombreTextoP1");
         textoNombreP2 = root.Q<Label>("NombreTextoP2");
 
+        textoReloj = root.Q<Label>("TextoReloj");
+        menuPausa = root.Q<VisualElement>("MenuPausa");
+        menuEntrenamiento = root.Q<VisualElement>("MenuEntrenamiento");
+
+        BtnAjusteTrainig botonEntrenamiento = GetComponent<BtnAjusteTrainig>();
+        if (botonEntrenamiento != null)
+        {
+            botonEntrenamiento.Inicializar(root);
+            botonEntrenamiento.OnProgresoCompletado += AbrirMenuEntrenamientoDesdeBoton;
+        }
+
         ActualizarBarraPorcentaje(rellenoVidaP1, 1f);
         ActualizarBarraPorcentaje(rellenoVidaP2, 1f);
+
+        AlternarVisibilidadElemento(menuPausa, false);
+        AlternarVisibilidadElemento(menuEntrenamiento, false);
     }
 
 
@@ -51,6 +71,26 @@ public class UIController : MonoBehaviour
         }
     }
 
+    public void ActualizarTextoReloj(int tiempoEntero)
+    {
+        if (textoReloj != null)
+        {
+            textoReloj.text = tiempoEntero.ToString();
+        }
+    }
+
+    public void MostrarMenuPausa(bool mostrar)
+    {
+        AlternarVisibilidadElemento(menuPausa, mostrar);
+        // Si cerramos la pausa general, nos aseguramos de que el sub-menú también se apague
+        if (!mostrar) AlternarVisibilidadElemento(menuEntrenamiento, false);
+    }
+
+    public void MostrarSubMenuEntrenamiento(bool mostrar)
+    {
+        AlternarVisibilidadElemento(menuEntrenamiento, mostrar);
+    }
+
     private void OnDisable()
     {
         DesuscribirCanalP1();
@@ -60,6 +100,14 @@ public class UIController : MonoBehaviour
     private void DesuscribirCanalP1()
     {
         if (canalActivoP1 != null) canalActivoP1.OnEventRaised -= OnVidaP1Modificada;
+    }
+
+    private void AlternarVisibilidadElemento(VisualElement elemento, bool visibilidad)
+    {
+        if (elemento != null)
+        {
+            elemento.style.display = visibilidad ? DisplayStyle.Flex : DisplayStyle.None;
+        }
     }
 
     private void DesuscribirCanalP2()
@@ -77,6 +125,13 @@ public class UIController : MonoBehaviour
             porcentaje = Mathf.Clamp01(porcentaje);
             elementoBarra.style.width = new Length(porcentaje * 100f, LengthUnit.Percent);
         }
+    }
+
+    private void AbrirMenuEntrenamientoDesdeBoton()
+    {
+        Time.timeScale = 0f; // Pausamos el juego
+        MostrarMenuPausa(true);
+        MostrarSubMenuEntrenamiento(true);
     }
 }
 

@@ -8,7 +8,7 @@
             <ui:Label text="playerName" data-source-path="NombreTextoP1" name="NombreTextoP1" style="height: 60px; font-size: 40px;"/>
         </ui:VisualElement>
         <ui:VisualElement name="ContenedorReloj" style="flex-grow: 1; border-left-color: rgb(255, 251, 255); border-right-color: rgb(255, 251, 255); border-top-color: rgb(255, 251, 255); border-bottom-color: rgb(255, 251, 255); background-color: rgba(255, 255, 255, 0); border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; align-items: center; justify-content: center; max-height: 120px; max-width: 150px; align-content: stretch; align-self: auto; flex-direction: column; background-image: url(&quot;project://database/Assets/Sprite/UI/recortes_papel%201.png?fileID=-7626864609712442957&amp;guid=32a8c4d1484ec2c44830f30646e26db0&amp;type=3#recortes_papel 1_1&quot;); -unity-background-image-tint-color: rgb(255, 255, 255);">
-            <ui:Label text="99" style="max-height: 150px; max-width: 150px; height: 100px; width: 100px; font-size: 90px; align-items: center; justify-content: center; align-self: center; align-content: center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;"/>
+            <ui:Label text="99" name="TextoReloj" style="max-height: 150px; max-width: 150px; height: 100px; width: 100px; font-size: 90px; align-items: center; justify-content: center; align-self: center; align-content: center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;"/>
         </ui:VisualElement>
         <ui:VisualElement name="ContenedorP1" style="flex-grow: 1; flex-direction: column; max-height: 150px; max-width: 700px; width: 82px; height: 120px; background-image: none; background-color: rgba(58, 121, 187, 0); padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-wrap: nowrap;">
             <ui:VisualElement name="VidaP2" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&quot;project://database/Assets/Sprite/UI/recortes_papel_rojo.png?fileID=6714107658963849706&amp;guid=7ba010c7284b2334d8c07c3b0871f52b&amp;type=3#recortes_papel_rojo_7&quot;); scale: 1 1; height: 17px; max-height: 70px; -unity-background-image-tint-color: rgb(255, 255, 255);">
@@ -17,4 +17,20 @@
             <ui:Label text="playerName" data-source-path="NombreTextoP2" name="NombreTextoP2" style="height: 60px; font-size: 40px; flex-wrap: nowrap; flex-direction: row-reverse; scale: 1 1; -unity-text-align: upper-right;"/>
         </ui:VisualElement>
     </ui:VisualElement>
+    <ui:VisualElement name="MenuEntrenamiento" style="flex-grow: 1; position: absolute; height: 686px; width: 1281px; background-color: rgba(0, 0, 0, 0.306); left: 0; top: 4px; align-items: flex-start; display: none;">
+        <ui:VisualElement name="Contenedor" style="flex-grow: 1; position: relative; width: 600px; height: 138px; top: 162px; left: 335px; min-height: 68px; max-height: 400px; flex-direction: column; align-self: stretch; justify-content: center; align-content: stretch; align-items: center; background-color: rgb(173, 152, 41);"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="MenuPausa" style="flex-grow: 1; position: absolute; height: 691px; width: 1278px; background-color: rgba(0, 0, 0, 0.306); left: 0; top: 1px; align-items: center; justify-content: flex-start; align-self: center; display: none;">
+        <ui:VisualElement name="Contenedor" style="flex-grow: 1; position: relative; width: 600px; height: 138px; top: 162px; left: 335px; min-height: 68px; max-height: 400px; flex-direction: column; align-self: stretch; justify-content: center; align-content: stretch; align-items: center; background-color: rgb(41, 146, 173); display: flex;">
+            <ui:Label text="Menu Pausa" name="TituloPausa" style="height: 48px; width: 248px; -unity-text-align: middle-center; white-space: pre; text-overflow: clip; align-self: center; font-size: 30px; color: rgb(255, 255, 255); text-shadow: 1111126px 1088889px 0 rgb(0, 0, 0);"/>
+            <ui:VisualElement style="flex-grow: 1; width: 420px; justify-content: space-evenly; align-items: center; align-self: center; height: 250px; max-height: 250px; min-height: 250px;">
+                <ui:Button text="Reanudar" name="Reanudar"/>
+                <ui:Button text="Configuración" name="Configuaracion"/>
+                <ui:Button text="Menu Principal" name="VolverMenu"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:Button text="" name="btn_ajustes" style="-unity-text-align: middle-center; position: absolute; top: 175px; left: 47px; background-image: url(&quot;project://database/Assets/Sprite/UI/boton_ajuste.png?fileID=2800000&amp;guid=d517a10d4e6e4a940a1d38c03c46a4bb&amp;type=3#boton_ajuste&quot;); height: 46px; width: 45px; background-color: rgba(188, 188, 188, 0); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;">
+        <ui:VisualElement name="progreso_circular" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprite/UI/progress_bar.png?fileID=2800000&amp;guid=9115047e5754bab40929397d00aff4a7&amp;type=3#progress_bar&quot;); position: absolute; top: -15px; left: -15px; right: -14px; bottom: -14px; width: 75px; height: 76px;"/>
+    </ui:Button>
 </ui:UXML>

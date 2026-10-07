@@ -13,7 +13,6 @@ public class Entity : MonoBehaviour
 
     [Header("Combate")]
     [SerializeField] private Hitbox miHitboxAtaque;
-    public float danioAtaqueBasico = 10f;
 
     private FloatEventChannel canalVidaAsignado;
     public FloatEventChannel CanalVidaAsignado => canalVidaAsignado;
@@ -93,14 +92,6 @@ public class Entity : MonoBehaviour
         if (!Atacando)
         {
             Atacando = true;
-
-            if (miHitboxAtaque != null) miHitboxAtaque.danioActual = danioAtaqueBasico;
-
-            animator.SetBool("attack", true);
-            animator.SetFloat("basicosN", 0);
-        }
-        else
-        {
             VerificarCombosEspeciales();
         }
     }
@@ -118,6 +109,8 @@ public class Entity : MonoBehaviour
                     miHitboxAtaque.danioActual = comboItem.danioDeEsteAtaque;
                 }
 
+                bool esUnComboLargo = comboItem.secuenciaRequerida.Length > 1;
+
                 animator.SetBool("attack", false);
                 animator.SetBool("combosAttack", false);
                 animator.SetBool(comboItem.parametroBool, true);
@@ -125,21 +118,35 @@ public class Entity : MonoBehaviour
                 if (comboItem.parametroBool == "combos") animator.SetFloat("specialesN", comboItem.numeroDeAnimacion);
                 if (comboItem.parametroBool == "combosAttack") animator.SetFloat("basicosCombosN", comboItem.numeroDeAnimacion);
 
-                Combo = "";
-                Cronometro = 0;
+                if (esUnComboLargo)
+                {
+                    Combo = "";
+                    Cronometro = 0;
+                }
+
                 Atacando = true;
                 break;
             }
         }
     }
+
+    public void VentanaDeCancelacionCombo()
+    {
+        if (Combo.Length > 0 && Combo != "H")
+        {
+            VerificarCombosEspeciales();
+        }
+    }
+
     public void FinalAttack()
     {
         animator.SetBool("combos", false);
         animator.SetBool("attack", false);
         animator.SetBool("combosAttack", false);
         Atacando = false;
-        Combo = "";
+        Combo = ""; 
     }
+
 
     private void FixedUpdate()
     {

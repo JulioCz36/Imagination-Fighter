@@ -166,6 +166,7 @@ MonoBehaviour:
   danioAtaqueBasico: 10
   listaDeCombos:
   - {fileID: 11400000, guid: d87569067750f6941a412eaa344d36bc, type: 2}
+  - {fileID: 11400000, guid: 1363fc2df0b86414eb8459f906017e7a, type: 2}
   Combo: 
   Cronometro: 0
   Tiempo: 0.5

@@ -27,7 +27,7 @@
                     "priority": 0
                 },
                 {
-                    "name": "New action",
+                    "name": "Options",
                     "type": "Button",
                     "id": "6ed47e19-bed8-4385-bc66-e52c411a7a8b",
                     "expectedControlType": "",
@@ -63,11 +63,22 @@
                 {
                     "name": "",
                     "id": "746a8e8d-b38e-4b31-8e15-8b6b76215ba7",
-                    "path": "",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Options",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "29adea49-e97e-4b9a-ad34-082c79b5c2b0",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Options",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

@@ -6,31 +6,46 @@ public class TrainingManager : MonoBehaviour
     [SerializeField] private MatchSetup setup;
 
     [Header("Opciones de Entrenamiento")]
-    public bool p2SeDefiende;
     public bool vidaInfinita;
+    public bool tiempoPausado;
+    public bool p2SeDefiende;
 
-    private System.Collections.IEnumerator Start() //funcionara?
+    private void Start()
     {
-        
-        yield return new WaitForEndOfFrame();
-
-        Entity p1 = setup.Jugador1;
-        Entity p2 = setup.Jugador2;
-
-        AplicarOpcionesDeEntrenamiento(p1, p2);
+        if (setup != null)
+        {
+            setup.ConfigurarPausaDelTiempo(tiempoPausado);
+        }
     }
 
     private void Update()
     {
-        if (vidaInfinita)
+        ManejarVidaInfinita();
+    }
+
+    private void ManejarVidaInfinita()
+    {
+        if (!vidaInfinita || setup == null) return;
+
+        if (setup.Jugador1 != null && setup.Jugador1.vidaActual < setup.Jugador1.ObtenerVidaMaxima())
         {
-            if (setup.Jugador1 != null) setup.Jugador1.vidaActual = setup.Jugador1.ObtenerVidaMaxima();
-            if (setup.Jugador2 != null) setup.Jugador2.vidaActual = setup.Jugador2.ObtenerVidaMaxima();
+            setup.Jugador1.vidaActual = setup.Jugador1.ObtenerVidaMaxima();
+            setup.Jugador1.CanalVidaAsignado?.RaiseEvent(1f);
+        }
+
+        if (setup.Jugador2 != null && setup.Jugador2.vidaActual < setup.Jugador2.ObtenerVidaMaxima())
+        {
+            setup.Jugador2.vidaActual = setup.Jugador2.ObtenerVidaMaxima();
+            setup.Jugador2.CanalVidaAsignado?.RaiseEvent(1f);
         }
     }
 
-    private void AplicarOpcionesDeEntrenamiento(Entity p1, Entity p2)
+    public void CambiarEstadoTiempo(bool pausar)
     {
-        Debug.Log($"Configurando entrenamiento para: {p1?.ObtenerNombre()} vs {p2?.ObtenerNombre()}");
+        tiempoPausado = pausar;
+        if (setup != null)
+        {
+            setup.ConfigurarPausaDelTiempo(tiempoPausado);
+        }
     }
 }
